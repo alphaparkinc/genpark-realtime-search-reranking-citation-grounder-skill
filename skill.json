@@ -1,0 +1,41 @@
+{
+  "name": "genpark-realtime-search-reranking-citation-grounder-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Realtime search reranking and factual citation grounder filtering hallucinated passages and computing dense cross-encoder semantic scores.",
+  "author": "genpark",
+  "category": "rag-search",
+  "tags": [
+    "search-reranking",
+    "citation-grounder",
+    "hallucination-mitigation",
+    "cross-encoder",
+    "semantic-attribution"
+  ],
+  "inputs": {
+    "raw_query": {
+      "type": "string"
+    },
+    "retrieved_passages_count": {
+      "type": "integer"
+    },
+    "top_k_citations": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "grounding_run_id": {
+      "type": "string"
+    },
+    "cross_encoder_rerank_score": {
+      "type": "number"
+    },
+    "hallucination_suppression_index_pct": {
+      "type": "number"
+    },
+    "attributed_markdown_synthesis_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
